@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sprite 스프라이트</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .social__wrap{
+      padding:20px 50px;
+    }
+    ul.social__list{list-style: none;}
+    li.social__item{
+      display: inline-block;
+      margin: 0 6px;
+      /* background-color: #ccc; 테스트 후 제거 */
+    }
+    a.social__link{
+      display: block;
+      width: 52px; height: 52px;
+      /* background-color: #ff3; 테스트 후 제거 */
+      background-image: url(./images/desktop.png);
+    }
+    li.social__item:nth-child(1)  a.social__link{background-position: -501px -155px;}
+    li.social__item:nth-child(2)  a.social__link{background-position: -553px -51px;}
+    li.social__item:nth-child(3)  a.social__link{background-position: -362px -464px;}
+    li.social__item:nth-child(4)  a.social__link{background-position: -501px -361px;}
+    li.social__item:nth-child(5)  a.social__link{background-position: -553px -258px;}
+    li.social__item:nth-child(6)  a.social__link{background-position: -553px -361px;}
+
+
+
+    .social__link .blind{
+      display: block; /*****/
+      text-indent: -9999px;
+      width: 1px; height: 1px; 
+      font-size: 1px;
+      color: transparent;
+      overflow: hidden;
+      /* background-color: #f00; 테스트후 삭제 */
+    }
+  </style>
+</head>
+<body>
+  
+    <!-- ul.social__list>li.social__item*6>a.social__link>span.blind -->
+    <div class="social__wrap">
+      <ul class="social__list">
+        <li class="social__item"><a href="" class="social__link"><span class="blind">1</span></a></li>
+        <li class="social__item"><a href="" class="social__link"><span class="blind">2</span></a></li>
+        <li class="social__item"><a href="" class="social__link"><span class="blind">3</span></a></li>
+        <li class="social__item"><a href="" class="social__link"><span class="blind">4</span></a></li>
+        <li class="social__item"><a href="" class="social__link"><span class="blind">5</span></a></li>
+        <li class="social__item"><a href="" class="social__link"><span class="blind">6</span></a></li>
+      </ul>
+    </div>
+</body>
+</html>

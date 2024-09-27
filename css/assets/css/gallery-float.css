@@ -8,12 +8,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul,ol,li{list-style: none;}
 
 /* 테스트화면용 */
 /* body{background-color: #ff9;} */
 .wrap {
-  /* margin: 50px; */
+  margin: 50px;
 }
+.card__list{}
+.card__list ul.card.wrap{}
+.card__list ul.card.item{}
+.card__list div.card{}
 /* card design */
 .card {
   width: 300px;

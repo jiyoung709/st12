@@ -29,8 +29,7 @@ ul,ol,li{list-style: none;}
   float:left;
   width: calc(25% - (10px+10px));
   margin: 10px; 
-  /* 좌우 바깥여백 10+10 */
-  /* 1col당 너비 (25%+20px)*4 */
+ 
 }
 .card__list div.card{}
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex2-양끝정렬</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrap {
+      }
+      .header {
+        padding: 1rem 0px;
+        background-color: #ccc;
+      }
+      .header .logo {
+        width: 100px;
+        height: 100px;
+        background-color: #ff6;
+      }
+      .header .toparea-stat {
+        width: 150px;
+        padding: 0.5rem 0;
+        background-color: #6ff;
+        margin-left: auto;
+      }
+      .flex-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        /* justify-content: space-between; */
+        align-items: center;
+      }
+      .item{
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header flex-container">
+        <h1 class="logo item">logo</h1>
+        <div class="toparea-stat item">기능메뉴</div>
+      </header>
+    </div>
+  </body>
+</html>

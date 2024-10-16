@@ -19,7 +19,7 @@ body>div{margin: 50px;}
   font-size: 0;
   line-height: 0;
 }
-.ec-base-product .prdList li{
+.ec-base-product .prdList > li{
 border: 1px solid #000;
 display: inline-block;
 font-size: 13px;
@@ -30,25 +30,30 @@ line-height: 1;
 .ec-base-product .prdList.grid3 li{width: 33.33%;}
 .ec-base-product .prdList.grid4 li{width: 25%;}
 .ec-base-product .prdList.grid5 li{width: 20%;}
-.ec-base-product .prdList .prdList__item{}
-.ec-base-product .prdList .thmbnail{
+.ec-base-product .prdList .prdList__item{
+  margin: 0 10px;
+}
+.ec-base-product .prdList .thumbnail{
   border: 1px solid #f00;
   position: relative;
 }
-.ec-base-product .prdList .thmbnail>a{}
-.ec-base-product .prdList .thmbnail>a>img{
+.ec-base-product .prdList .thumbnail>a{
+  display: block;
+}
+.ec-base-product .prdList .thumbnail>a>img{
   /* 원래 이미지보다 크지 않으면서 부모의 너비를 따라서 */
   width: 100%;
+  display: block;
 }
 
-.ec-base-product .prdList .thmbnail .likeButton::before{
+.ec-base-product .prdList .thumbnail .likeButton::before{
   content: "Like";
   font-size: 12px;
   
   display: block;
   line-height: 1;
 }
-.ec-base-product .prdList .thmbnail .likeButton{
+.ec-base-product .prdList .thumbnail .likeButton{
   border: 1px solid #00f;
   position: absolute;
   left: 5%; top: 4%;
@@ -59,14 +64,14 @@ line-height: 1;
   align-items: center;
   cursor: pointer;
 }
-.ec-base-product .prdList .thmbnail .likeButton button{
+.ec-base-product .prdList .thumbnail .likeButton button{
   background-color: transparent;
   border: none;
 }
-.ec-base-product .prdList .thmbnail .likeButton img{
+.ec-base-product .prdList .thumbnail .likeButton img{
   display: none;
 }
-.ec-base-product .prdList .thmbnail .likeButton strong{
+.ec-base-product .prdList .thumbnail .likeButton strong{
   display: block;
   cursor: pointer;
   font-weight: normal;
@@ -80,28 +85,62 @@ line-height: 1;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  opacity: 0;
   
 }
+.ec-base-product .prdList .prdList__item:hover .icon__box{
+  opacity: 1;
+}
 .ec-base-product .prdList .icon__box >span{
+  box-sizing: border-box;
   display: block;
   position: relative;
   border: 1px solid #999;
-  font-weight: 500px;
+  border-radius: 10px;
+  min-width: 74px;
   padding: 10px 15px;
+  font-weight:bold;
   margin: 0 4px;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-
+  cursor: pointer;
+  text-align: center;
+  
+}
+.ec-base-product .prdList .icon__box >span:hover{
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
 
 }
-.ec-base-product .prdList .icon__box >span.wish{}
-.ec-base-product .prdList .icon__box >span.cart{}
-.ec-base-product .prdList .icon__box >span.option{}
 .ec-base-product .prdList .icon__box >span img{
   position: absolute;
   left: 0; top: 0; width: 100%; height: 100%;
   opacity: 0;
 }
-.ec-base-product .prdList .icon__box >span.wish img{}
-.ec-base-product .prdList .icon__box >span.cart img{}
-.ec-base-product .prdList .icon__box >span.option img{}
+/* 할인율 */
+.ec-base-product .prdList .sale_box{
+  position: absolute;
+  right: 5%; top: 4%;
+  width: 50px; height: 50px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* description */
+.ec-base-product .prdList .description{
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.ec-base-product .prdList .description .name .a{
+  text-decoration: none;
+}
+.ec-base-product .prdList .description .name .title+span{
+  color: #f00 !important;
+  font-size: 15px !important;
+}
+.ec-base-product .prdList .description .spec{}
+.ec-base-product .prdList .description .spec li{}

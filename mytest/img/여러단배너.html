@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배너</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .mybanner{margin: 50px;}
+    ul,ol,li{list-style: none;}
+    a{text-decoration: none;}
+
+    .mybanner{
+      --banner-gap:20px;
+      --banner-m-h-gap:10px;
+      --banner-m-v-gap:10px;
+      --banner-top-margin:50px;
+      --banner-bottom-margin:50px;
+      --banner-top-padding:50px;
+      --banner-bottom-padding:50px;
+      --banner-max-width:1440px;
+      --col1:100%;
+      --col2:50%;
+      --col3:33.333%;
+      --col4:25%;
+      --col5:20%;
+    }
+    .mybanner{
+      margin-top: var(--banner-top-margin);
+      margin-bottom: var(--banner-bottom-margin);
+      /* background-color: #ccc; */
+    }
+    .mybanner__inner{
+      max-width: var(--banner-max-width);
+      margin: 0 auto;
+      /* background-color: #f6f; */
+      padding-top: var(--banner-top-padding);
+      padding-bottom: var(--banner-bottom-padding);
+      /* background-color: #f6f; */
+    }
+    .mybanner__list{
+      display: flex;
+      gap: var(--banner-gap);
+      box-sizing: border-box;
+    }
+    .mybanner__item{
+      flex: 1;
+      box-sizing: border-box;
+      background-color: #66f;
+    }
+    .mybanner__list.grid1 .mybanner__item{width: var(--col1);   }
+    .mybanner__list.grid2 .mybanner__item{width: var(--col2);   }
+    .mybanner__list.grid3 .mybanner__item{width: var(--col3);   }
+    .mybanner__list.grid4 .mybanner__item{width: var(--col4);   }
+    .mybanner__list.grid5 .mybanner__item{width: var(--col5);   }
+    .mybanner__link{display: block;}
+    .mybanner .thumb-box picture{
+      display: block;
+      width: 100%;
+    }
+    .mybanner .thumb-box picture,
+    .mybanner .thumb-box picture source,
+    .mybanner .thumb-box img{
+      display: block;
+      width: 100%;}
+    .mybanner .text-box .text-title{
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f2f2f2;
+    }
+    .mybanner .text-box .text-desc{
+      font-size: 14px;
+      font-weight: 300;
+      color: bisque;
+    }
+
+    @media (max-width:767px){
+      .mybanner__list{
+        gap: var(--banner-m-h-gap);   var(--banner-m-v-gap);
+        flex-wrap: wrap;
+      }
+      .mybanner__item{
+        flex: 1 0 auto;
+      }
+
+      .mybanner .mybanner__item.m-col1{width: calc(var(--col1) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col2{width: calc(var(--col2) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col3{width: calc(var(--col3) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col4{width: calc(var(--col4) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col5{width: calc(var(--col5) - var(--banner-m-v-gap));}
+    }
+  </style>
+</head>
+<body>
+  <div class="mybanner">
+    <div class="mybanner__inner">
+      <ul class="mybanner__list grid3">
+        <li class="mybanner__item m-col2">
+          <a href="" class="mybanner__link">
+            <div class="thumb-box">
+             <picture>
+              <source srcset="../html/picture/img/img_768x768.jpg" media="(max-width: 767px)">
+              <img src="../html/picture/img/img_1920x810.jpg" alt="">
+             </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">과일차</p>
+              <p class="text-desc">향긋한 과일향을 맛보고 싶을때 선택해주세요.</p>
+            </div>
+          </a>
+        </li>
+        <li class="mybanner__item m-col2">
+          <a href="" class="mybanner__link">
+            <div class="thumb-box">
+             <picture>
+              <source srcset="../html/picture/img/img_768x768.jpg" media="(max-width: 767px)">
+              <img src="../html/picture/img/img_1920x810.jpg" alt="">
+             </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">과일차</p>
+              <p class="text-desc">향긋한 과일향을 맛보고 싶을때 선택해주세요.</p>
+            </div>
+          </a>
+        </li>
+        <li class="mybanner__item m-col1">
+          <a href="" class="mybanner__link">
+            <div class="thumb-box">
+             <picture>
+              <source srcset="../html/picture/img/img_768x768.jpg" media="(max-width: 767px)">
+              <img src="../html/picture/img/img_1920x810.jpg" alt="">
+             </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">과일차</p>
+              <p class="text-desc">향긋한 과일향을 맛보고 싶을때 선택해주세요.</p>
+            </div>
+          </a>
+        </li>
+       
+
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

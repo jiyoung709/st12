@@ -1,0 +1,100 @@
+
+.btn_megamenu {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 40px;
+  margin-right: 10px;
+}
+.btn_megamenu a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.btn_megamenu .icon.icoNav {
+  display: block;
+  width: 20px;
+  height: 2px;
+  color: black;
+  background-color: currentColor;
+  box-shadow: 0 14px 0;
+  position: relative;
+  margin-top: -14px;
+}
+.btn_megamenu .icon.icoNav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+/* btn_mega_close */
+.btn_megamenu.btn_mega_close a{
+  transform: rotate(45deg);
+  margin: 0 auto;
+
+}
+.btn_megamenu.btn_mega_close a .icon.icoNav{
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_megamenu.btn_mega_close a .icon.icoNav::before{
+  transform: rotate(90deg);
+}
+.btn_megamenu.btn_mega_close a .icon.icoNav::after{
+  content: "";
+  position: absolute;
+  left: 0; top: 7px;
+  width: 20px; height: 2px;
+  background-color: currentColor;
+}
+.dimmed{
+  display: none;
+  z-index: 990;
+  position: fixed;
+  top: 0; left: 0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+body{
+  background-color: #f00;
+  min-height: 2000px;
+}
+.mega-opened{
+  overflow: hidden;
+  height: 100%;
+}
+.mega-opened #layoutDimmed{
+  display: block;
+}
+/* .mega_box */
+.mega_box{
+  display: none;
+}
+.mega-opened .mega_box{
+  display: block;
+}
+.mega_box .mega_inner{
+  display: flex;
+  width: 92%;
+  min-width: 1680px;
+  padding: 50px 0;
+  background-color: #ff6;
+  margin: 0 auto;
+}
+
+/* .mega_box .mega_inner 의 자식들을 스타일 */
+
+@media (max-width:1024px){
+  .mega_box,
+  .btn_megamenu{
+    display: none;
+  }
+}
+/* 메가메뉴 스타일 끝 */

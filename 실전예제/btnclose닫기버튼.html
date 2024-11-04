@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>닫기버튼</title>
+    <style>
+      *{margin: 0; padding: 0;}
+      body{margin: 50px;}
+      
+      .btnClose{
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        /* background-color: #ccc; */
+        color: transparent;
+        text-indent: 150%;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 0;
+        cursor: pointer;
+      }
+      .btnClose .icon.icoClose{
+        /* background-color: #ff6; */
+        display: block;
+        position: relative;
+        width: 24px; height: 24px;
+        transform: rotate(45deg);
+        margin: 0 auto;
+      }
+      .btnClose .icon.icoClose::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(50%);
+        width: 2px;
+        height: 100%;
+        background-color: #000;
+        transition: all 0.3s ease-out;
+
+      }
+      .btnClose .icon.icoClose::after{
+        content:"";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btnClose">
+    <i class="icon icoClose"></i>
+    닫기
+  </button>
+  </body>
+</html>

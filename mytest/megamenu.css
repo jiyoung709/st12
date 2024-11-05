@@ -62,10 +62,8 @@
   background-color: rgba(0, 0, 0, 0.7);
 
 }
-body{
-  background-color: #f00;
-  min-height: 2000px;
-}
+
+
 .mega-opened{
   overflow: hidden;
   height: 100%;
